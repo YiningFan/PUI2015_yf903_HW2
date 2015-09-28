@@ -16,8 +16,7 @@ if __name__=='__main__':
 
     print "Number of Active Buses : %d" % len(buses)
 
-    #Error occurred in this part. I kept getting list index out of range error from next line. However, after I changed sys.argv[3] to sys.argv[2], the program worked but could not generate a csv fil\
-e. It did create a text file with all the information.                                                                                                                                                  
+    #Error occurred in this part. I kept getting list index out of range error from next line. However, after I changed sys.argv[3] to sys.argv[2], the program worked but could not generate a csv file. It did create a text file with all the information.                                                                                                                                                  
     with open(sys.argv[2],'wb') as csvfile:
         writer=csv.writer(csvfile, delimiter=',')
         writer.writerow(['Latitude', 'Longitude', 'Stop Name', 'Stop Status' ])
