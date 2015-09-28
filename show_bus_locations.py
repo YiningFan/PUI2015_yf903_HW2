@@ -12,7 +12,8 @@ if __name__=='__main__':
     request=urllib2.urlopen(url)
     json_file=json.load(request)
     buses=json_file['Siri']['ServiceDelivery']['VehicleMonitoringDelivery'][0]['VehicleActivity']
-
+    
+    #get locations from json file
     print "Number of Active Buses : %d" % len(buses)
     for i in range(len(buses)):
         location=buses[i]['MonitoredVehicleJourney']["VehicleLocation"]
